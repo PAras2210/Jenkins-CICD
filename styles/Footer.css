@@ -1,0 +1,28 @@
+/* src/styles/Footer.css */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #4a2c2a;
+    color: white;
+  }
+  
+  .footer .share a {
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    font-size: 2rem;
+    border: 0.1rem solid #fff;
+    color: #fff;
+    margin: 0 0.3rem;
+    border-radius: 50%;
+  }
+  
+  .footer .share a:hover {
+    background: #fff;
+    color: #4a2c2a;
+  }
+  
+  .footer .credit {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+  }
