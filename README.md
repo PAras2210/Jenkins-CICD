@@ -106,6 +106,13 @@ http://<SONARQUBE_EC2_IP>:9000/dashboard?id=Coffee-Shop
 scp -r ./* ubuntu@<DOCKER_EC2_IP>:~/Coffee_website/
 ```
 
+```bash
+cd  Coffee_website
+docker build -t coffee_website .
+docker stop coffee_site || true
+docker rm coffee_site || true
+docker run -d -p 8085:80 --name coffee_site coffee_website
+```
 ✔ Build Status: **SUCCESS**
 ✔ Files transferred via SSH
 ✔ Deployment completed
