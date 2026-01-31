@@ -66,10 +66,10 @@ Key highlights:
 * Secure permissions
 
 ```dockerfile
-FROM nginx:1.29-alpine
+FROM nginxinc/nginx-unprivileged:alpine
 RUN rm -rf /usr/share/nginx/html/*
-
-RUN chown -R web:web /usr/share/nginx/html
+COPY ./Jenkins-CICD /usr/share/nginx/html/
+RUN chmod -R 755 /usr/share/nginx/html/
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 ```
